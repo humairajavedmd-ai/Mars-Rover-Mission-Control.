@@ -19,3 +19,10 @@
   * Requires scalable network architecture (e.g., connection pooling, asynchronous I/O) to manage 20 parallel data streams.
 
 ---
+### Change Request CR-03 — Security Upgrade
+* **Original Requirement (NFR-02):** Only authenticated Mission Control operators shall be permitted to issue rover commands.
+* **Updated Requirement (NFR-02):** The system shall require authenticated and **role-authorized** operators to issue commands.
+* **Impact Analysis:** 
+  * Upgrades basic authentication to Role-Based Access Control (RBAC).
+  * System must now verify not only *who* the operator is, but also *what actions* their assigned role allows (e.g., Driver vs. Payload Specialist).
+  * Requires identity management database integration and role-permission checks for every incoming command.

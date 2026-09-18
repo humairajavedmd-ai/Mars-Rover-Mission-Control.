@@ -10,3 +10,12 @@
 
 ---
 
+### Change Request CR-02 — Mission Expansion
+* **Original Requirement (NFR-04):** The system shall support communication with multiple rovers simultaneously.
+* **Updated Requirement (NFR-04):** The system shall support at least **20 simultaneously connected rovers**.
+* **Impact Analysis:** 
+  * Makes the non-functional requirement measurable and testable.
+  * Increases server-side bandwidth and resource allocation demands for Mission Control.
+  * Requires scalable network architecture (e.g., connection pooling, asynchronous I/O) to manage 20 parallel data streams.
+
+---
